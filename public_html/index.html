@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Personal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            *{
+                
+                box-sizing: border-box;
+            }
+            body {
+                background-color: blue;
+            }            
+            #izquierdo {
+                text-align: center;
+                background-color: #cccccc;
+                float: left;
+                margin-left: 40px;
+                margin-top: 80px;
+                padding: 10px;
+                position: fixed;
+                z-index: -1;
+            }            
+            #principal {
+                text-align: center;
+                background-color: #3399ff;
+                float: left;
+                left: 120px;
+                margin-top: 80px;
+                margin-left: 80px;
+                width:80%;  
+                position: fixed;
+                z-index: -1;
+            }  
+            #right {
+                float:  left;
+                margin-left: 40px;
+                margin-top: 270px;
+                position: fixed;
+            }
+            #imagen {
+                display: none;
+                position: fixed;
+                float: left;
+                margin-top: 90px;
+                margin-left: 180px;
+            }
+            .navi {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                background: #222222;
+                display: inline-block;
+                height: 100vh;
+                position: absolute;
+            }
+            .navi li {
+                cursor: pointer;
+                border-top: 1px solid #f2f2f2;
+                border-bottom: 1px solid #f2f2f2;
+                margin-bottom: -1px;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                font-size: 18px;
+                color: #ffffff;
+            }
+            .navi li div,.nav li i {
+                position: absolute;
+                text-align: center;
+                animation-duration: 0.34s;
+            }
+            .navi li div{
+                margin-left: 60px;
+                text-align: center;
+                width: 160px;
+                display: none;
+                z-index: 1;
+                background: #ed1c24;
+            }
+            .navi li i{
+                line-height: 60px;
+                width: 60px;
+                z-index: 9;
+                background: #222222;
+            }
+            .navi li:hover > div{
+                display: inline-block;
+            }
+            .navi li:hover i{
+                background: #ed1c24;
+            }
+            <!-- superior menu-->
+            .parent, .child{
+                margin:0;
+                padding: 0;
+            }
+            #menu li{
+                list-style: none;
+            }
+            .child{
+                display: none;
+                width: 100%;
+                margin-top: 13px;
+                background: #494949;
+                padding: 10px 0;                
+            }            
+            .parent > li {
+                float:left;
+                width: 20%;
+                text-align: center;
+                padding: 10px 0;
+                background: #747474;
+                color: white;   
+                border-right: 1px solid #959595; 
+                cursor: pointer;
+            }
+        </style>
+        <!-- include the last version of jQuery library-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="script.js"></script>
+                   
+    </head>
+    <body>
+        <div id="superior">
+            <nav id="menu">
+                <ul class="parent">
+                    <li>first
+                        <ul class="child">
+                            <li id="graph">firts two</li>
+                        </ul>
+                    </li>
+                    <li>second</li>
+                    <li>third
+                        <ul class="child">
+                            <li>third two</li>
+                        </ul>                                            
+                    </li>
+                    <li>fourth</li>
+                    <li>fifth</li>
+                </ul>
+
+            </nav>
+        </div>
+        <div id="izquierdo">
+            <p>Texto parrafo</p>
+            <p><b>Texto en negrilla</b></p>
+            <p><i>Texto en italica</i></p>  
+            <p><a href="https://capacitateparaelempleo.org" target="blank">Enlace</a></p>
+        </div>
+        <div id="principal">
+            <p>
+                <b>DATOS PERSONALES: <br></b>
+                <b>NOMBRE:</b> Darc <br>
+                <b>DIRECCION:</b> Cra  # <br>
+                <b>TELEFONO:</b> 111111111
+                
+            </p>
+        </div>
+        <div id="right">
+            <ul class="navi">
+                <li>
+                    <i class="home"></i>
+                    <div class="animated">Home</div>
+                </li>
+                <li>
+                    <i class="user"></i>
+                    <div class="animated">About</div>
+                </li>
+                <li>
+                    <i class="certificate"></i>
+                    <div class="animated">Skills</div>
+                </li>
+                <li>
+                    <i class="desktop"></i>
+                    <div class="animated">Projects</div>
+                </li>
+
+            </ul>
+        </div>
+        <div id="imagen">
+            <img src="temp.png" alt="imagen">
+        </div>
+    </body>
+</html>
